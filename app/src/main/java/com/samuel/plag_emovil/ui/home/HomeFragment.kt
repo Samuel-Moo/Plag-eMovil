@@ -32,6 +32,16 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+        val valNameRobot: TextView = binding.nameRobot
+        homeViewModel.textNameRobot.observe(viewLifecycleOwner){
+            valNameRobot.text = it
+        }
+        val valIdRobot: TextView = binding.robotId
+        homeViewModel.textRobotID.observe(viewLifecycleOwner){
+            valIdRobot.text = it
+        }
+
         return root
     }
 

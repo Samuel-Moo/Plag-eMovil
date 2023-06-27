@@ -12,16 +12,23 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.samuel.plag_emovil.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_map"
+        android:name="com.samuel.plag_emovil.ui.map.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.samuel.plag_emovil.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_buy"
+        android:name="com.samuel.plag_emovil.ui.buy.BuyFragment"
+        android:label="buy"
+        tools:layout="@layout/fragment_buy" />
+
+    <fragment
+        android:id="@+id/navigation_tutorials"
+        android:name="com.samuel.plag_emovil.ui.tutorials.TutorialsFragment"
+        android:label="Tutorials"
+        tools:layout="@layout/fragment_tutorials" />
+
 
 
 </navigation>

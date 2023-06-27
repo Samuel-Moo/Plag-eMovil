@@ -1,4 +1,4 @@
-package com.samuel.plag_emovil.ui.notifications
+package com.samuel.plag_emovil.ui.buy
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.samuel.plag_emovil.databinding.FragmentNotificationsBinding
+import com.samuel.plag_emovil.databinding.FragmentBuyBinding
 
-class NotificationsFragment : Fragment() {
+class BuyFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentBuyBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class NotificationsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val buyViewModel =
+            ViewModelProvider(this).get(BuyViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentBuyBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textBuy
+        buyViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
